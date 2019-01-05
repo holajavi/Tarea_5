@@ -45,3 +45,13 @@ for(i in 1:length(textoNoticia)){
 
 textoCompleto
 
+#Pasando la info a un data frame
+dfPalabrasNoticia <- as.data.frame(tablaPalabras)
+dfPalabrasNoticia
+
+#Almacenamiento de información en CVS
+write.csv(dfPalabrasNoticia, file="PalabrasNoticia.cvs")
+
+#o en un txt
+write.table(dfPalabrasNoticia, file="PalabrasNoticia.txt")
+
