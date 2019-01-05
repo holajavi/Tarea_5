@@ -1,6 +1,6 @@
 #Usando la librería rvest
 
-install.packages('rvest')
+#install.packages('rvest')
 library('rvest')
 
 #Iniciando la variable archivo con el nombre de mi página
@@ -54,4 +54,23 @@ write.csv(dfPalabrasNoticia, file="PalabrasNoticia.cvs")
 
 #o en un txt
 write.table(dfPalabrasNoticia, file="PalabrasNoticia.txt")
+
+
+#####Exraccion de informacion de la tabla###
+
+#Extrayendo el contenido de la tabla a traves de tag
+tablaProductos <- html_nodes(webpage,".productos")
+contenedorTablas <- html_nodes(tablaProductos, "table")
+
+
+#ejemplo
+
+
+#Extrayendo los elementos de la tabla
+tablaProductosExtraida1 <- html_table(contenedorTablas[1][[1]])
+
+#Viendo el contenido de la posicion 1.2 de la tabla 
+print(tablaProductosExtraida[1,2])
+
+
 
