@@ -37,3 +37,11 @@ tablaPalabras<-table(unlistNoticias)
 #Pasando la información
 dfPalabraNoticia <- as.data.frame(tablaPalabras)
 
+#Pista 
+textoCompleto <-""
+for(i in 1:length(textoNoticia)){
+  textoCompleto <-paste(textoCompleto," ",textoNoticia[i]) 
+}
+
+textoCompleto
+
