@@ -78,3 +78,12 @@ tabla2 <- html_table(contenedorTablas[2][[1]])
 #Viendo el contenido de la posición 1,2 de la tabla2
 print(tabla2[1,2])
 
+
+#Graficando los productos
+library('ggplot2')
+
+#Gráfico Barra
+tabla1 %>%
+  ggplot() +
+  aes(x = Producto, y = Valor)+
+  geom_bar(stat="identity")
