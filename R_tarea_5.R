@@ -67,10 +67,10 @@ contenedorTablas <- html_nodes(tablaProductos, "table")
 
 
 #Extrayendo los elementos de la tabla
-tablaProductosExtraida1 <- html_table(contenedorTablas[1][[1]])
+tabla1 <- html_table(contenedorTablas[1][[1]])
 
-#Viendo el contenido de la posicion 1.2 de la tabla 
-print(tablaProductosExtraida[1,2])
+#Viendo el contenido de la posicion 1,2 de la tabla1 
+print(tabla1[1,2])
 
 
 
