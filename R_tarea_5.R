@@ -87,3 +87,16 @@ tabla1$PRECIO <- as.numeric(gsub(",",".",tabla1$PRECIO))
 tabla2$PRECIO <- gsub("\\$","",tabla2$PRECIO)
 tabla2$PRECIO <- gsub("[.]","",tabla2$PRECIO)
 tabla2$PREICO <- as.numeric(gsub(",",".",tabla2$PRECIO))
+
+
+################### Graficando los productos
+library('ggplot2')
+
+# Gráfico Barra por producto concatenado con supermercado,
+# respecto al costo
+tabla1 %>%
+  ggplot() +
+  aes(x = PRODUCTO, y = PRECIO) +
+  geom_bar(stat="identity")
+
+
