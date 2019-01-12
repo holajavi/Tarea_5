@@ -79,11 +79,7 @@ tabla2 <- html_table(contenedorTablas[2][[1]])
 print(tabla2[1,2])
 
 
-#Graficando los productos
-library('ggplot2')
-
-#Gráfico Barra
-tabla1 %>%
-  ggplot() +
-  aes(x = Producto, y = Valor)+
-  geom_bar(stat="identity")
+# Limpiando $ comas y cambios de puntos por coma
+tabla1$PRECIO <- gsub("\\$","",tabla1$PRECIO)
+tabla1$PRECIO <- gsub("[.]","",tabla1$PRECIO)
+tabla1$PRECIO <- as.numeric(gsub(",",".",tabla1$PRECIO))
