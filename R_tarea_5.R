@@ -100,3 +100,8 @@ tabla1 %>%
   geom_bar(stat="identity")
 
 
+tabla2 %>%
+  ggplot() +
+  aes(x = PRODUCTO, y = PRECIO) +
+  geom_bar(stat="identity")
+
