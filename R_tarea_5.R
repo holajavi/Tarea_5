@@ -83,3 +83,7 @@ print(tabla2[1,2])
 tabla1$PRECIO <- gsub("\\$","",tabla1$PRECIO)
 tabla1$PRECIO <- gsub("[.]","",tabla1$PRECIO)
 tabla1$PRECIO <- as.numeric(gsub(",",".",tabla1$PRECIO))
+
+tabla2$PRECIO <- gsub("\\$","",tabla2$PRECIO)
+tabla2$PRECIO <- gsub("[.]","",tabla2$PRECIO)
+tabla2$PREICO <- as.numeric(gsub(",",".",tabla2$PRECIO))
