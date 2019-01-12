@@ -105,3 +105,8 @@ tabla2 %>%
   aes(x = PRODUCTO, y = PRECIO) +
   geom_bar(stat="identity")
 
+# Gráfico boxplot diferenciado por producto
+tabla1 %>%
+  ggplot() +
+  geom_boxplot(aes(x = PRODUCTO, y = PRECIO)) +
+  theme_bw()
